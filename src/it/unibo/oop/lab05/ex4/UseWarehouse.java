@@ -28,15 +28,14 @@ public final class UseWarehouse {
          * 
          * 2) The implementation of Product must implement Comparable<Product>.
          */
-        final Product p1 = null;
-        final Product p2 = null;
-        final Product p3 = null;
-        final Warehouse w = null;
+        final Product p1 = new ComparableProduct("Apple", 100);
+        final Product p2 = new ComparableProduct("Banana", 30);
+        final Product p3 = new ComparableProduct("Watermelon", 10);
+        final Warehouse w = new OrderedWarehouse();
         w.addProduct(p3);
         w.addProduct(p1);
         w.addProduct(p2);
         System.out.println(w.allNames());
         System.out.println(w.allProducts());
     }
-
 }
